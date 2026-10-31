@@ -1,0 +1,600 @@
+
+/* =========================
+   ANKHORA - DESERT ELEGANCE
+========================= */
+
+:root {
+    --beige: #F1E2C6;
+    --olive: #6E7A3D;
+    --black: #111111;
+    --gold: #C89F3C;
+    --light-gold: #E4C879;
+    --white: #FFF9EF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--beige);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo, .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+/* =========================
+   INTRO VIDEO
+========================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+}
+
+.intro-subtitle {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--light-gold);
+    margin-bottom: 15px;
+}
+
+.intro-overlay h1 {
+    font-size: clamp(55px, 10vw, 110px);
+    letter-spacing: 8px;
+    color: var(--light-gold);
+    font-weight: 500;
+}
+
+.intro-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.skip-btn {
+    margin-top: 35px;
+    padding: 12px 30px;
+    background: var(--olive);
+    color: var(--white);
+    border: 1px solid var(--light-gold);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.skip-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* =========================
+   MAIN WEBSITE
+========================= */
+
+.main-website {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.main-website.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    min-height: 85px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid rgba(110, 122, 61, 0.3);
+    background: var(--beige);
+}
+
+.logo {
+    color: var(--black);
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--olive);
+}
+
+.music-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: var(--olive);
+    color: var(--white);
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 600px;
+    padding: 70px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.eyebrow {
+    color: var(--olive);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 500;
+    line-height: 0.98;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 2;
+    color: #514A3E;
+    max-width: 400px;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: var(--olive);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: var(--black);
+}
+
+.hero-image {
+    height: 440px;
+    overflow: hidden;
+    border: 1px solid var(--olive);
+    padding: 8px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   TREASURES
+========================= */
+
+.treasures {
+    padding: 100px 7%;
+    background: #F7ECD8;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2,
+.game-section h2,
+.about-section h2 {
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #655A47;
+}
+
+.artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.artifact-card {
+    background: var(--beige);
+    border: 1px solid var(--olive);
+    padding: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.artifact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(50, 45, 20, 0.12);
+}
+
+.artifact-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.artifact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.artifact-card:hover .artifact-image img {
+    transform: scale(1.05);
+}
+
+.artifact-info {
+    padding: 25px 15px 20px;
+}
+
+.artifact-number {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--olive);
+}
+
+.artifact-info h3 {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: 600;
+    margin: 10px 0 15px;
+}
+
+.artifact-info p {
+    color: #65532D;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* =========================
+   HIEROGLYPH GAME
+========================= */
+
+.game-section {
+    padding: 110px 7%;
+    text-align: center;
+    background: var(--beige);
+}
+
+.game-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.game-section > .game-content > p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 2;
+    color: #655A47;
+}
+
+.game-box {
+    background: #F7ECD8;
+    border: 1px solid var(--olive);
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.game-box label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.game-box input {
+    width: 100%;
+    padding: 15px;
+    background: var(--beige);
+    border: 1px solid var(--olive);
+    outline: none;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.game-box input:focus {
+    border-color: var(--gold);
+}
+
+.game-box button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    background: var(--olive);
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.game-box button:hover {
+    background: var(--black);
+}
+
+.hieroglyph-result {
+    margin-top: 30px;
+    min-height: 80px;
+    padding: 20px;
+    border: 1px dashed var(--gold);
+    font-family: serif;
+    font-size: 40px;
+    color: var(--black);
+    overflow-wrap: anywhere;
+}
+
+.game-note {
+    margin-top: 20px;
+    font-size: 10px !important;
+    color: #80765F !important;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    padding: 100px 12%;
+    background: #E9D9B9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-section p:not(.eyebrow) {
+    color: #655A47;
+    font-size: 13px;
+    line-height: 2.2;
+}
+
+.about-symbol {
+    font-size: 130px;
+    color: var(--olive);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--black);
+    color: var(--beige);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    color: var(--gold);
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+footer p {
+    margin: 15px 0;
+    font-size: 12px;
+    color: #D7C9A8;
+}
+
+footer span {
+    font-size: 10px;
+    color: #9E947F;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .artifact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        padding: 80px 7%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .treasures {
+        padding: 75px 6%;
+    }
+
+    .artifact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .artifact-image {
+        height: 350px;
+    }
+
+    .game-section {
+        padding: 75px 6%;
+    }
+
+    .game-box {
+        padding: 25px 18px;
+    }
+
+    .about-section {
+        padding: 70px 7%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-symbol {
+        font-size: 90px;
+    }
+
+    .intro-overlay h1 {
+        letter-spacing: 4px;
+    }
+
+    .intro-description {
+        font-size: 12px;
+    }
+
+}
