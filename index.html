@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANKHORA | The Grand Egyptian Museum</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="Egypt.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- INTRO VIDEO -->
+    <section id="intro" class="intro">
+
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="Grand.mp4" type="video/mp4">
+        </video>
+
+        <div class="intro-overlay">
+            <p class="intro-subtitle">WELCOME TO</p>
+
+            <h1>ANKHORA</h1>
+
+            <p class="intro-description">
+                Discover the wonders of ancient Egypt
+            </p>
+
+            <button id="skipIntro" class="skip-btn">
+                Skip Intro →
+            </button>
+        </div>
+
+    </section>
+
+    <!-- MAIN WEBSITE -->
+    <div id="mainWebsite" class="main-website">
+
+        <!-- NAVIGATION -->
+        <header class="navbar">
+
+            <a href="#home" class="logo">
+                ANKHORA
+            </a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#treasures">Treasures</a>
+                <a href="#game">Hieroglyph Game</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <button id="musicButton" class="music-btn" aria-label="Toggle background music">
+                ♫
+            </button>
+
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">A JOURNEY THROUGH TIME</p>
+
+                <h1>
+                    The Grand<br>
+                    Egyptian Museum
+                </h1>
+
+                <p>
+                    Where the past inspires the future.
+                    Explore the timeless treasures of ancient Egypt.
+                </p>
+
+                <a href="#treasures" class="explore-btn">
+                    Explore the Treasures
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="intro.jpg" alt="Interior of the Grand Egyptian Museum">
+            </div>
+
+        </section>
+
+        <!-- TREASURES SECTION -->
+        <section id="treasures" class="treasures">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">HISTORY IN EVERY DETAIL</p>
+
+                <h2>Treasures of Egypt</h2>
+
+                <p>
+                    Discover the stories behind some of Egypt's most remarkable
+                    ancient artifacts.
+                </p>
+
+            </div>
+
+            <div class="artifact-grid">
+
+                <!-- TUTANKHAMUN MASK -->
+                <article class="artifact-card">
+
+                    <div class="artifact-image">
+                        <img src="masktut.jpg" alt="Golden Mask of Tutankhamun">
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <span class="artifact-number">01</span>
+
+                        <h3>Mask of Tutankhamun</h3>
+
+                        <p>
+                            The magnificent golden funerary mask of Pharaoh
+                            Tutankhamun is one of ancient Egypt's most iconic
+                            masterpieces. Crafted from gold and decorated with
+                            colorful inlays, it symbolized royal power and
+                            protection in the afterlife.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <!-- MUMMIES -->
+                <article class="artifact-card">
+
+                    <div class="artifact-image">
+                        <img src="mum.jpg" alt="Ancient Egyptian Mummies">
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <span class="artifact-number">02</span>
+
+                        <h3>Ancient Egyptian Mummies</h3>
+
+                        <p>
+                            Mummification was an important ancient Egyptian
+                            practice designed to preserve the body for the
+                            afterlife. These remains reveal fascinating details
+                            about ancient beliefs, rituals, and daily life.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <!-- USHABTI FIGURINES -->
+                <article class="artifact-card">
+
+                    <div class="artifact-image">
+                        <img src="hh.jpg" alt="Ancient Egyptian Ushabti Figurines">
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <span class="artifact-number">03</span>
+
+                        <h3>Ushabti Figurines</h3>
+
+                        <p>
+                            Ushabti were small funerary figurines placed in
+                            tombs to serve the deceased in the afterlife.
+                            These fascinating objects reflect ancient Egyptian
+                            beliefs about life beyond death.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- HIEROGLYPH GAME -->
+        <section id="game" class="game-section">
+
+            <div class="game-content">
+
+                <p class="eyebrow">UNLOCK THE LANGUAGE OF THE PHARAOHS</p>
+
+                <h2>Your Name in Hieroglyphs</h2>
+
+                <p>
+                    Discover a fun phonetic interpretation of your name
+                    using ancient Egyptian hieroglyphic symbols.
+                </p>
+
+                <div class="game-box">
+
+                    <label for="nameInput">Enter Your Name</label>
+
+                    <input
+                        type="text"
+                        id="nameInput"
+                        placeholder="Write your name in English..."
+                        maxlength="30"
+                    >
+
+                    <button id="convertButton">
+                        Reveal My Name
+                    </button>
+
+                    <div id="hieroglyphResult" class="hieroglyph-result">
+                        Your hieroglyphs will appear here
+                    </div>
+
+                </div>
+
+                <p class="game-note">
+                    A playful phonetic approximation inspired by ancient
+                    Egyptian writing.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+
+            <div class="about-content">
+
+                <p class="eyebrow">ABOUT ANKHORA</p>
+
+                <h2>Where History Comes Alive</h2>
+
+                <p>
+                    ANKHORA is a digital journey into the world of ancient
+                    Egypt, celebrating its extraordinary heritage through
+                    art, history, and interactive experiences.
+
+                    Explore remarkable artifacts, discover their stories,
+                    and connect with a civilization that continues to inspire
+                    the world.
+                </p>
+
+            </div>
+
+            <div class="about-symbol">
+                ☥
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <a href="#home" class="footer-logo">ANKHORA</a>
+
+            <p>
+                Discover the past. Celebrate eternity.
+            </p>
+
+            <span>
+                © 2026 ANKHORA | The Grand Egyptian Museum
+            </span>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
